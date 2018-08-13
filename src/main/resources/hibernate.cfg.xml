@@ -18,7 +18,7 @@
 		<property name="connection.pool_size">10</property>
 
 		<!-- SQL dialect -->
-		<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
 		<!-- Gerenciamento do Contexto das Sessões -->
 		<property name="current_session_context_class">thread</property>
@@ -30,9 +30,20 @@
 		<property name="show_sql">true</property>
 
 		<!-- Cria as tabelas do banco de dados -->
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">validate</property>
 		
+		<!-- Mapeamento das Entidades -->
+		
+		<mapping class="br.com.drogaria.domain.Cidade"/>
+		<mapping class="br.com.drogaria.domain.Cliente"/>
 		<mapping class="br.com.drogaria.domain.Estado"/>
+		<mapping class="br.com.drogaria.domain.Fabricante"/>
+		<mapping class="br.com.drogaria.domain.Funcionario"/>
+		<mapping class="br.com.drogaria.domain.ItemVenda"/>
+		<mapping class="br.com.drogaria.domain.Pessoa"/>
+		<mapping class="br.com.drogaria.domain.Produto"/>
+		<mapping class="br.com.drogaria.domain.Usuario"/>
+		<mapping class="br.com.drogaria.domain.Venda"/>
 		
 	</session-factory>
 
