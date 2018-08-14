@@ -64,6 +64,19 @@
 			<version>2.4.0</version>
 		</dependency>
 
+		<!-- PrimeFaces -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>6.2</version>
+		</dependency>
+
+		<!-- CDI... Sem ela o projeto parou de funcionar -->
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<version>1.2</version>
+		</dependency>
 
 	</dependencies>
 </project>
