@@ -16,7 +16,8 @@
 
 		<p:panel header="Produtos - Listagem">
 
-			<p:dataTable emptyMessage="Nenhum registro encontrado">
+			<p:dataTable emptyMessage="Nenhum registro encontrado."
+				paginator="true">
 
 				<f:facet name="header">
 					<p:commandButton value="Novo" oncomplete="PF('dialogo').show();" />
@@ -42,7 +43,7 @@
 	</h:form>
 
 	<p:dialog header="Produtos - Cadastro" widgetVar="dialogo"
-		draggable="false" modal="true">
+		draggable="false" 	modal="true">
 		<h:form>
 
 			<h:panelGrid columns="2">
@@ -64,7 +65,7 @@
 
 			<h:panelGrid columns="2">
 				<p:commandButton value="Salvar" />
-				<p:commandButton value="Fechar" />
+				<p:commandButton value="Cancelar" oncomplete="PF('dialogo').hide();" />
 			</h:panelGrid>
 		</h:form>
 	</p:dialog>
