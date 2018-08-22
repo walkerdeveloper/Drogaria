@@ -11,44 +11,47 @@
 </h:head>
 <h:body>
 
+	<p:growl id="mensagem" />
+
 	<h:form>
 
 		<p:panel header="Estados - Listagem">
 			<p:dataTable emptyMessage="Nenhum registro encontrado."
 				paginator="true">
-					<f:facet name="header">
-						<p:commandButton value="Novo" oncomplete="PF('dialogo').show();"/>
-					</f:facet>
-					<p:column headerText="Nome">
-					</p:column>
-					
-					<p:column headerText="Sigla">
-					</p:column>
-					
-					<p:column headerText="Opções">
-					</p:column>
-					
+				<f:facet name="header">
+					<p:commandButton value="Novo" oncomplete="PF('dialogo').show();" />
+				</f:facet>
+				<p:column headerText="Nome">
+				</p:column>
+
+				<p:column headerText="Sigla">
+				</p:column>
+
+				<p:column headerText="Opções">
+				</p:column>
+
 			</p:dataTable>
 		</p:panel>
 	</h:form>
 
-	<p:dialog header="Estados - Cadastro" widgetVar="dialogo" 
+	<p:dialog header="Estados - Cadastro" widgetVar="dialogo"
 		draggable="false" modal="true">
 		<h:form>
 			<h:panelGrid columns="2">
 				<p:outputLabel value="Nome" />
 				<p:inputText maxlength="50" size="30" />
-				
+
 				<p:outputLabel value="Sigla" />
 				<p:inputText maxlength="2" size="10" />
-			</h:panelGrid>	
-			
-			<h:panelGrid columns="2">	
-				<p:commandButton value="Salvar"/>
-				<p:commandButton value="Fechar" oncomplete="PF('dialogo').hide();"/>
+			</h:panelGrid>
+
+			<h:panelGrid columns="2">
+				<p:commandButton value="Salvar"
+					actionListener="#{estadoBean.salvar}" update=":mensagem" />
+				<p:commandButton value="Fechar" oncomplete="PF('dialogo').hide();" />
 			</h:panelGrid>
 		</h:form>
 	</p:dialog>
-	
+
 </h:body>
 </html>
