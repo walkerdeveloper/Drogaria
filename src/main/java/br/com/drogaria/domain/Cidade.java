@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Cidade extends GenericDomain {
 	
-	@Column(length = 80, nullable = false)
+	@Column(length = 50, nullable = false)
 	private String nome;
 	
 	@ManyToOne
